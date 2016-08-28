@@ -1,3 +1,4 @@
+/* Changed margin from 0 to 0 3%*/
 body,
 div,
 ul,
@@ -9,13 +10,23 @@ h3,
 h4,
 h5,
 h6 {
-  padding:0;
-  margin:0;
+  padding: 0;
+  margin: 0 3%;
   font-family: "Roboto", sans-serif;
+}
+
+/*Added new style for hr*/
+hr {
+  border: 0.1em solid #004169;
 }
 
 .clear-fix {
   overflow: auto;
+}
+
+/*Added Style for topContacts*/
+#topContacts {
+  margin-bottom: 1em;
 }
 
 .education-entry,
@@ -24,26 +35,30 @@ h6 {
   padding: 0 5%;
 }
 
+/*Changed Color property value*/
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #004169;
   line-height: 48px;
   display: inline;
 }
 
+/*Changed Color property value*/
 h2 {
   font-weight: bold;
   font-size: 24px;
-  color: #999;
+  color: #004169;
   line-height: 29px;
   padding: 10px;
 }
 
+/*Added text-align property*/
 h3 {
   font-style: italic;
   font-size: 20px;
   color: #000;
   line-height: 22px;
+  text-align: left;
 }
 
 h4 {
@@ -53,21 +68,32 @@ h4 {
   line-height: 17px;
 }
 
+/*Removed h3*/
 h2,
-h3,
 h4,
 h5 {
-  padding:10px 5%;
-
+  padding: 10px 5%;
 }
 
+/*Added ad hoc padding for h3*/
+h3 {
+  padding: 15px 0;
+}
 
+/*added style for image*/
+img {
+  width: 17%;
+  height: 15%;
+}
+
+/*Added margin-top and changed color*/
 .date-text {
   font-style: italic;
   font-size: 14px;
-  color: #999;
+  color: #2d2828;
   line-height: 16px;
   float: left;
+  margin-top: 0.5em;
 }
 
 .location-text {
@@ -76,17 +102,19 @@ h5 {
   color: #999;
   line-height: 16px;
   float: right;
-
 }
 
+/*Added margin-top*/
 p {
   font-size: 14px;
   color: #333;
   line-height: 21px;
+  margin-top: 0.5em;
 }
 
+/*Changed Color*/
 a {
-  color: #1199c3;
+  color: #0584ab;
   text-decoration: none;
   margin-top: 10px;
   display: block;
@@ -99,17 +127,18 @@ a {
   line-height: 28px;
 }
 
+/*Changed color*/
 #skills-h3 {
-  color: #f5ae23;
+  color: #004169;
   display: none;
 }
-
+/*Changed color*/
 .orange {
-  background-color: #f5ae23;
+  background-color: #c1c1c1;
 }
 
 .orange-text {
-  color: #f5ae23;
+  color: #004169;
 }
 
 .white-text {
@@ -117,19 +146,36 @@ a {
   color: #fff;
 }
 
+/*Changed background color and added border*/
 .gray {
-  background-color: #f3f3f3;
+  background-color: #e4eaec;
+  border-top: 0.5em solid #fff;
   padding-bottom: 10px;
-  clear:both;
+  clear: both;
+}
+/*Added style for project*/
+#projects {
+  background-color: #d6dfe4;
+  padding-bottom: 10px;
+  clear: both;
+  border-top: 0.5em solid #fff;
+}
+/*Added style for mapDiv*/
+#mapDiv {
+  background-color: #d6dfe4;
+  height: 500px;
+  border-top: 0.5em solid #fff;
 }
 
+/*Changed background color and added border*/
 .dark-gray {
-  background-color: #4a4a4a;
+  background-color: #728298;
+  border-top: 0.5em solid #fff;
 }
 
-/* TODO: Replace with image later */
+/* Changed background-color */
 #header {
-  background-color: #484848;
+  background-color: #728298;
 }
 
 .flex-box {
@@ -146,6 +192,10 @@ a {
   flex-direction: column;
   flex-wrap: nowrap;
   padding: 10px;
+}
+/*Added Style for flex item*/
+.flex-item {
+  margin-left: 0;
 }
 
 .center-content {
@@ -167,8 +217,11 @@ img {
   padding: 10px;
 }
 
+/*Added font-size and font-weight*/
 span {
   padding: 5px;
+  font-size: 110%;
+  font-weight: bolder;
 }
 
 #lets-connect {
@@ -180,25 +233,27 @@ span {
 @media only screen and (max-width: 1024px) {
   #lets-connect {
     margin-top: 5%;
-  }
+  };
 }
 
 @media only screen and (max-width:900px) {
   .biopic {
     width: 175px;
-  }
+  };
 }
 
 @media only screen and (max-width: 750px) {
   #lets-connect {
     margin-top: 10%;
   }
+
   .biopic {
     width: 150px;
   }
+
   .welcome-message {
     display: none;
-  }
+  };
 }
 
 #map {
@@ -206,10 +261,10 @@ span {
   height: 100%;
   margin: 0 5%;
 }
-
+/*Comment added*/
 #mapDiv {
-  height: 400px;
-  width: 100%;
+  /*height: 400px;*/
+  /*width: 100%;*/
   padding-bottom: 5%;
 }
 
@@ -217,5 +272,5 @@ span {
   #skills-h3,
   .biopic {
     display: block;
-  }
+  };
 }
