@@ -12,7 +12,7 @@ var bio = {
     "welcomeMessage": "Lorem ipsum dolor sit amet etc etc etc.",
     "skills": ["programming", "functional analyst", "software tester"],
     "biopic": "images/fry.jpg",
-    display: function() {
+    "display": function() {
         var formattedName = HTMLheaderName.replace(data,bio.name);
         var formattedRole = HTMLheaderRole.replace(data,bio.role);
         $("#header").prepend(formattedName + formattedRole);
@@ -58,9 +58,9 @@ var work = {
         "dates": "From 03/2013 To 09/2014",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque diam, bibendum ut vestibulum sit amet, laoreet suscipit nunc. Vivamus vehicula justo at sollicitudin congue. Nullam porta commodo congue. Vestibulum varius viverra sapien non maximus. Quisque ac nunc sem. Praesent viverra eget eros et fringilla. Sed blandit fringilla justo, at laoreet sem vestibulum quis. In volutpat pretium leo, ut vestibulum diam sollicitudin a. Suspendisse consequat libero ut feugiat efficitur."
     }],
-    display: function() {
+    "display": function() {
         if (work.jobs.length > 0) {
-            for (job in work.jobs) {
+            for (var job = 0; job < work.jobs.length; job++) {
                 $("#workExperience").append(HTMLworkStart);
                 var formattedEmployer = HTMLworkEmployer.replace(data,work.jobs[job].employer);
                 var formattedTitle = HTMLworkTitle.replace(data,work.jobs[job].title);
@@ -87,9 +87,9 @@ var projects = {
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque diam, bibendum ut vestibulum sit amet, laoreet suscipit nunc. Vivamus vehicula justo at sollicitudin congue. Nullam porta commodo congue. Vestibulum varius viverra sapien non maximus. Quisque ac nunc sem. Praesent viverra eget eros et fringilla. Sed blandit fringilla justo, at laoreet sem vestibulum quis. In volutpat pretium leo, ut vestibulum diam sollicitudin a. Suspendisse consequat libero ut feugiat efficitur.",
         "images": ["images/Image1Project2.jpg", "images/Image2Project2.jpg"]
     }],
-    display: function() {
+    "display": function() {
         if (projects.projects.length > 0) {
-            for (project in projects.projects) {
+            for (var project = 0; project < projects.projects.length; project++) {
                 $("#projects").append(HTMLprojectStart);
                 var formattedTitle = HTMLprojectTitle.replace(data,projects.projects[project].title);
                 $(".project-entry:last").append(formattedTitle);
@@ -135,10 +135,10 @@ var education = {
         "dates": "From 06/2015 to 09/2015",
         "url": "https://www.coursera.org/learn/game-development"
     }],
-    display: function() {
+    "display": function() {
         $("#education").append(HTMLschoolStart);
         if (education.schools.length > 0) {
-            for (school in education.schools) {
+            for (var school = 0; school < projects.projects.length; school++) {
                 var formattedSchoolName = HTMLschoolName.replace(data,education.schools[school].name);
                 var formattedSchoolDegree = HTMLschoolDegree.replace(data,education.schools[school].degree);
                 $(".education-entry:last").append(formattedSchoolName + formattedSchoolDegree);
@@ -152,7 +152,7 @@ var education = {
         }
         if (education.onlineCourses.length > 0) {
             $(".education-entry:last").append(HTMLonlineClasses);
-            for (onlineCourse in education.onlineCourses) {
+            for (var onlineCourse = 0; onlineCourse < education.onlineCourses.length; onlineCourse++) {
                 var formattedCourseTitle = HTMLonlineTitle.replace(data,education.onlineCourses[onlineCourse].title);
                 var formattedCourseSchool = HTMLonlineSchool.replace(data,education.onlineCourses[onlineCourse].school);
                 $(".education-entry:last").append(formattedCourseTitle + formattedCourseSchool);
